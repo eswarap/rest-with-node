@@ -1,1 +1,1 @@
-full fledged node js express mongodo project with rest (CRUD)
+full fledged node js express mongodb project with rest (CRUD)
