@@ -8,15 +8,17 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: 'false'}));
 app.use(bodyParser.json());
-
+app.use(express.json());
 // Use env variables
 require('dotenv').config();
 
 
 // Import routes
 const postRoute = require('./routes/posts.js');
+const authRoute = require('./routes/auth.js');
 
 app.use('/api/posts', postRoute);
+app.use('/api/user', authRoute);
 
 // Connect to mongodb
 const mongoose = require("mongoose");
